@@ -14,29 +14,18 @@ sprzedaz_[miesiac]2024 - dane sprzedażowe dla każdego miesiąca (styczeń-list
 
 Relacje:
 
-Tabela samochody powiązana z kategoria (klucz obcy)
-Tabele sprzedaży powiązane z województwa (klucz obcy)
+Tabela samochody powiązana z kategoria (klucz obcy), tabele sprzedaży powiązane z województwa (klucz obcy)
 
 Funkcjonalności
-1. Zarządzanie danymi podstawowymi
-
-Tworzenie i zarządzanie kategoriami pojazdów
-Dodawanie informacji o samochodach (marka, model, spalanie)
-Zarządzanie słownikami województw i miesięcy
+1. Zarządzanie danymi podstawowymi: tworzenie i zarządzanie kategoriami pojazdów, dodawanie informacji o samochodach (marka, model, spalanie), zarządzanie słownikami województw i miesięcy
 
 2. Analiza sprzedaży
 
-Analiza sprzedaży według województw
-Porównanie sprzedaży między miesiącami
-Analiza konkretnych marek (szczególnie Mazda)
-Statystyki min/max sprzedaży
+Analiza sprzedaży według województw, porównanie sprzedaży między miesiącami, analiza konkretnych marek (szczególnie Mazda),statystyki min/max sprzedaży
 
 3. Zaawansowane zapytania
 
-Łączenie danych z wielu miesięcy
-Grupowanie i agregacje
-Sortowanie wyników
-Warunki logiczne z HAVING
+Łączenie danych z wielu miesięcy, grupowanie i agregacje, sortowanie wyników, warunki logiczne z HAVING
 
 Przykłady użycia
 Analiza sprzedaży Mazdy w województwach:
@@ -71,8 +60,9 @@ USE `zaliczenie`;
 Uruchomienie skryptu:
 
 
-Zaimportuj plik SQL do MySQL
-Uruchom skrypt w MySQL Workbench lub przez wiersz poleceń
+Zaimportuj plik SQL do MySQL, 
+uruchom skrypt w MySQL Workbench lub przez wiersz poleceń
+
 
 Źródła danych
 Dane pochodzą z oficjalnego portalu danych otwartych Rzeczypospolitej Polskiej:
@@ -103,21 +93,12 @@ WHERE k.idkategoria=s.idkategoria
 GROUP BY kategoria, s.marka;
 
 Problemy znane
-Kodowanie znaków - niektóre nazwy województw zawierały błędne znaki
-Struktura danych - konieczność ręcznego dodawania kluczy obcych
-Normalizacja - tabele miesięczne mogłyby być zunifikowane
+Kodowanie znaków - niektóre nazwy województw zawierały błędne znaki, struktura danych - konieczność ręcznego dodawania kluczy obcych, normalizacja - tabele miesięczne mogłyby być zunifikowane
 
-Możliwe rozszerzenia
-
- Dodanie analizy trendów rocznych
- Implementacja procedur składowanych
- Dodanie widoków dla częstych zapytań
- Integracja z narzędziami BI
- Dodanie danych o cenach samochodów
 
 Autor
 Projekt wykonany jako część zaliczenia z przedmiotu baz danych.
-Licencja
-Dane pochodzą z portalu dane.gov.pl i są udostępnione na licencji otwartej.
+Licencja: 
+dane pochodzą z portalu dane.gov.pl i są udostępnione na licencji otwartej.
 
 Ostatnia aktualizacja: Styczeń 2025
